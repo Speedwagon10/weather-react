@@ -12,7 +12,7 @@ function App() {
     let locationHour;
 
     const APIKey = "0b7bfcef963f4175b04143758241102";
-    const url = `http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${location}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${location}&aqi=no`;
 
     const onKeyBoardSearchLocation = (e) => {
         if (e.key === "Enter" && !isEmpty && !error) {
