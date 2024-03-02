@@ -1,0 +1,52 @@
+.error-block {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 30%;
+    padding: 1rem;
+
+    animation-name: anim-error;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.436);
+
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+.error-block svg {
+    width: 60px;
+    height: 60px;
+}
+
+@keyframes anim-error {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+
+    10% {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        z-index: 1;
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,127 @@
+.weather-card {
+    width: 600px;
+    height: auto;
+
+    margin-top: 100px;
+
+    backdrop-filter: blur(5px);
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    background-color: #2424244a;
+
+    padding: 1rem;
+
+    color: #fff;
+
+    position: relative;
+}
+
+.img-block {
+    width: 64px;
+    height: 64px;
+}
+
+.img-block.not {
+    background-color: #ffffff2d;
+}
+
+.weather-card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h1 span {
+    font-size: 2.7rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    opacity: .7;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+p span {
+    font-size: 1.3rem;
+}
+
+.weather-card button {
+    background: none;
+
+    padding: .5rem;
+
+    color: #fff;
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+    border: none;
+}
+
+.parameters {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.par-item {
+    text-align: center;
+}
+
+.par-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.par-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff30;
+    margin: 0 auto;
+
+}
+
+.icon1 {
+    background: url("../assets/pressure.png");
+    background-size: cover;
+}
+
+.icon2 {
+    background: url('../assets/wind.png');
+    background-size: cover;
+}
+
+.icon3 {
+    background: url('../assets/humidity2.png');
+    background-size: cover;
+}
+
+@media (max-width: 650px) {
+    .weather-card {
+        width: 90%;
+    }
+
+    .parameters {
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+}
