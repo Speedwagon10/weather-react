@@ -2,42 +2,32 @@
     width: 70%;
     display: flex;
 }
-
 .form-input {
     width: 90%;
-
     font-size: 1.5rem;
-
     background: none;
-
     color: inherit;
-
     border: none;
     border-bottom: 2px solid rgba(255, 255, 255, 0.632);
-
     padding: .8rem;
 }
-
 .form-input:focus {
     outline: none;
 }
-
+.form-input::placeholder {
+    color: #fff;
+}
 .form-button {
     background: #4c4c4c73;
-
     border: 1px solid #ffffffb3;
     border-radius: 10px;
-
     cursor: pointer;
-
     font-size: 1.5rem;
     color: #fff;
-
     padding: 1rem;
     margin-left: 5px;
 }
-
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .form {
         width: 95%;
     }

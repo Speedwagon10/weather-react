@@ -26,7 +26,7 @@ const Input = ({
             />
             <button
                 className="form-button"
-                type="button"
+                type="submit"
                 onClick={onClickEvent}
             >
                 Search
