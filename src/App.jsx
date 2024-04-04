@@ -42,7 +42,6 @@ function App() {
                     .then((data) => {
                         if (!data.error) {
                             setData(data);
-                            console.log(data)
                             setLocation("");
                             locationHour = data.location.localtime.slice(
                                 data.location.localtime.length - 5,
