@@ -22,6 +22,20 @@ function App() {
         }
     };
 
+    const addBackgroundColor = (locaionTimeInHour) => {
+        console.log(locaionTimeInHour)
+        debugger
+        if (locaionTimeInHour >= 5 && locaionTimeInHour < 12) {
+            setTheme("morning");
+        } else if (locaionTimeInHour >= 12 && locaionTimeInHour < 18) {
+            setTheme("afternoon");
+        } else if (locaionTimeInHour >= 18 && locaionTimeInHour < 23){
+             setTheme("evening");
+        } else {
+            setTheme("night");
+        }              
+    } 
+
     const searchLocation = () => {
         if (!isEmpty && !error) {
             if (location !== "") {
@@ -30,25 +44,13 @@ function App() {
                     .then((data) => {
                         if (!data.error) {
                             setData(data);
+                            console.log(data)
                             setLocation("");
                             locationHour = data.location.localtime.slice(
                                 data.location.localtime.length - 5,
                                 data.location.localtime.length - 3
                             );
-                            switch (locationHour) {
-                                case locationHour >= 5 && locationHour < 12:
-                                    setTheme("morning");
-                                    break;
-                                case locationHour >= 12 && locationHour < 18:
-                                    setTheme("afternoon");
-                                    break;
-                                case locationHour >= 18 && locationHour < 23:
-                                    setTheme("evening");
-                                    break;
-                                default:
-                                    setTheme("night");
-                                    break;
-                            }
+                            addBackgroundColor(locationHour);
                         } else {
                             setLocation("");
                             setTimeout(() => {
