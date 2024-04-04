@@ -23,8 +23,6 @@ function App() {
     };
 
     const addBackgroundColor = (locaionTimeInHour) => {
-        console.log(locaionTimeInHour)
-        debugger
         if (locaionTimeInHour >= 5 && locaionTimeInHour < 12) {
             setTheme("morning");
         } else if (locaionTimeInHour >= 12 && locaionTimeInHour < 18) {
