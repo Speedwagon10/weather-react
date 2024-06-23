@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Weather from "./components/Weather";
-import {API_KEY} from './info.json';
+import {API_KEY} from './info.js';
 import Input from "./components/Input";
 import ModalError from "./components/ModalError";
 
@@ -23,8 +23,6 @@ function App() {
     };
 
     const addBackgroundColor = (locaionTimeInHour) => {
-        console.log(locaionTimeInHour)
-        debugger
         if (locaionTimeInHour >= 5 && locaionTimeInHour < 12) {
             setTheme("morning");
         } else if (locaionTimeInHour >= 12 && locaionTimeInHour < 18) {
@@ -44,7 +42,6 @@ function App() {
                     .then((data) => {
                         if (!data.error) {
                             setData(data);
-                            console.log(data)
                             setLocation("");
                             locationHour = data.location.localtime.slice(
                                 data.location.localtime.length - 5,
